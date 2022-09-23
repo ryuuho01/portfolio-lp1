@@ -1,0 +1,15 @@
+@use '../global/mixin/breakpoint' as bp;
+
+.header{
+  width: 1000px;
+  margin: auto;
+  &__img{
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width : bp.$pc) {
+    width: 100%;
+  }
+}

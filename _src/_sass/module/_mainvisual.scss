@@ -1,0 +1,512 @@
+@use '../global/setting/font-family' as font;
+@use '../global/mixin/function' as function;
+@use '../global/mixin/breakpoint' as bp;
+body {
+  background-color: rgb(255, 255, 255);
+  width: 1000px;
+  margin: auto;
+  @media screen and (max-width : bp.$pc) {
+    width: 100%;
+  }
+}
+@keyframes button {
+  0% {
+    transform: rotate(0.5deg);
+  }
+
+  50% {
+    transform: rotate(-0.5deg);
+  }
+
+  100% {
+    transform: rotate(0.5deg);
+  }
+}
+.button {
+  width: 400px;
+  height: 90px;
+  background: rgb(50, 117, 46);
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px 1px;
+  margin: 100px auto;
+  transition: 0.3s;
+  animation: 0.5s ease 0s infinite button;
+  a {
+    font-family: font.$noto-sans;
+    font-size: 25px;
+    color:white;
+    font-weight: 900;
+    display: inline-block;
+    text-align: center;
+    line-height: 90px;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width : bp.$pc) {
+    width: 80%;
+    margin: 80px auto;
+    height: 70px;
+    a {
+      font-size: 22px;
+      line-height: 70px;
+    }
+  }
+}
+.button:hover {
+  background: rgb(60, 142, 55);
+}
+.present-title1 {
+  width: 525px;
+  margin: auto;
+  margin-top: 34px;
+  img {
+    width: 100%;
+  }
+  &__sp {
+    display: none;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      width: 100%;
+      margin-top: 27px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+.present-title2 {
+  width: 100%;
+  margin-top: 10px;
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  &__sp {
+    display: none;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      width: 100%;
+      margin-top: 5px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.present1 {
+  display: flex;
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__para {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    p {
+      width: 420px;
+      font-size: 20px;
+      margin: auto;
+    }
+  }
+  &__sp {
+    display: none;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      &__img {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      &__para {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        p {
+          width: 90%;
+          font-size: clamp(15px, function.vw(28px, bp.$pc), 28px);
+          margin-top: 10px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+.present2 {
+  display: flex;
+  flex-direction: row-reverse;
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__para {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    p {
+      width: 320px;
+      font-size: 20px;
+      margin: auto;
+    }
+  }
+  &__sp {
+    display: none;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      &__img {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      &__para {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        p {
+          width: 90%;
+          font-size: clamp(15px, function.vw(28px, bp.$pc), 28px);
+          margin-top: 10px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+.present3 {
+  display: flex;
+  margin-bottom: 120px;
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__para {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      width: 310px;
+      font-size: 20px;
+    }
+    div {
+      width: 50px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__sp {
+    display: none;
+    margin-bottom: 80px;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      &__img {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      &__para {
+        width: 100%;
+        p {
+          width: 90%;
+          display: flex;
+          font-size: clamp(15px, function.vw(28px, bp.$pc), 28px);
+          margin-top: 10px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 30px;
+        }
+        p::after {
+          content: "";
+          background: url(../img/sp/fb_logo.png) no-repeat;
+          background-size: cover;
+          width: clamp(30px, function.vw(50px, bp.$pc), 50px);
+          height: clamp(30px, function.vw(50px, bp.$pc), 50px);
+          margin-left: 10px;
+          transform: translate(0, clamp(-5px, function.vw(-5px, bp.$pc), -5px));
+        }
+      }
+    }
+  }
+}
+.catch {
+  display: flex;
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  div {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  &__sp {
+    display: none;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      width: 100%;
+      div {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.worry {
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  margin-top: 130px;
+  &__title {
+    font-size: 34px;
+    font-family: font.$noto-sans;
+    font-weight: 900;
+    text-align: center;
+    margin: 40px 0px;
+  }
+  &__card {
+    width: 100%;
+    display: flex;
+    div {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .woman {
+      img {
+        width: 350px;
+        padding-left: 80px;
+      }
+    }
+  }
+  &__sp {
+    display: none;
+    margin-top: 120px;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      img {
+        width: 100%;
+      }
+      &__title {
+        font-size: clamp(23px, function.vw(12px, bp.$pc), 128px);
+        font-family: font.$noto-sans;
+        font-weight: 900;
+        text-align: center;
+        margin-top: 75px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+.solution {
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  width: 100%;
+  margin-top: 100px;
+  img {
+    width: 100%;
+  }
+  &__sp {
+    display: none;
+    margin-top: 80px;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+    }
+    width: 100%;
+    transform: translate(0, -2px);
+    img {
+      width: 100%;
+    }
+  }
+}
+.button2 {
+  width: 400px;
+  height: 90px;
+  background: rgb(50, 117, 46);
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px 1px;
+  margin: 120px auto;
+  transition: 0.3s;
+  animation: 0.5s ease 0s infinite button;
+  a {
+    font-family: font.$noto-sans;
+    font-size: 25px;
+    color: white;
+    font-weight: 900;
+    display: inline-block;
+    text-align: center;
+    line-height: 90px;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width : bp.$pc) {
+    width: 80%;
+    height: 70px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    a {
+      font-size: 22px;
+      line-height: 70px;
+    }
+  }
+}
+.button2:hover {
+  background: rgb(60, 142, 55);
+}
+.customer {
+  width: 100%;
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+  &__sp {
+    display: none;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.profile {
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  width: 100%;
+  transform: translate(0, -4px);
+  margin-top: 130px;
+  img {
+    width: 100%;
+  }
+  &__sp {
+    display: none;
+    margin-top: 90px;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      width: 100%;
+      transform: translate(0, -2px);
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.button2-2 {
+  width: 400px;
+  height: 90px;
+  background: rgb(50, 117, 46);
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px 1px;
+  margin: 120px auto;
+  transition: 0.3s;
+  animation: 0.5s ease 0s infinite button;
+  a {
+    font-family: font.$noto-sans;
+    font-size: 25px;
+    color: white;
+    font-weight: 900;
+    display: inline-block;
+    text-align: center;
+    line-height: 90px;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width : bp.$pc) {
+    width: 80%;
+    height: 70px;
+    margin: 80px auto;
+    a {
+      font-size: 22px;
+      line-height: 70px;
+    }
+  }
+}
+.button2-2:hover {
+  background: rgb(60, 142, 55);
+}
+.last-message {
+  width: 100%;
+  @media screen and (max-width : bp.$pc) {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+  &__sp {
+    display: none;
+    @media screen and (max-width : bp.$pc) {
+      display: block;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.button3 {
+  width: 400px;
+  height: 90px;
+  background: rgb(50, 117, 46);
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px 1px;
+  margin: 110px auto;
+  transition: 0.3s;
+  animation: 0.5s ease 0s infinite button;
+  a {
+    font-family: font.$noto-sans;
+    font-size: 25px;
+    color: white;
+    font-weight: 900;
+    display: inline-block;
+    text-align: center;
+    line-height: 90px;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width : bp.$pc) {
+    width: 80%;
+    height: 70px;
+    margin: 80px auto;
+    a {
+      font-size: 22px;
+      line-height: 70px;
+    }
+  }
+}
+.button3:hover {
+  background: rgb(60, 142, 55);
+}
